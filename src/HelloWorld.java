@@ -12,11 +12,12 @@ public class HelloWorld {
 //        String myString = 3.14159;
         System.out.println();
 
-        long myNumber
+//        long myNumber = ;
+//        System.out.println(myNumber);
 
 
 
-        float myNumber = 3.14F;
+//        float myNumber = 3.14F;
 //        float myNumber = (float) 3.14;
 
 

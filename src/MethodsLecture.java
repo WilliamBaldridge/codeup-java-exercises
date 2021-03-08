@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -5,59 +6,67 @@ public class MethodsLecture {
 
     public static void main(String[] args) {
 
-        String name = "William";
-        System.out.println(tryGetSalutation(name));
+//        String name = "William";
+//        System.out.println(tryGetSalutation(name));
 
-        printGreeting();
+//        printGreeting();
 
 
 //        printMultiplication(2, 4);
 //        multiplyUserInput();
 
-        printNames();
+//        printNames();
+
+        int start = 1;
+        int end = 100;
+        System.out.println(Arrays.toString(fizzBuzz(start, end)));
+
+        System.out.println(sum(10));
+
+
     }
 
 // ============== Method Definitions ===============
 
 // *** Access Modifiers ***
 
-    public static void printSalutation(String name) {
-        System.out.println(tryGetSalutation(name));
-    }
-
-    public static String tryGetSalutation(String name) {
-
-        if ((name == null) || (name.equals(""))) {
-            return "No name provided";
-        } else {
-            return getSalutation(name, "Why, hello ");
-        }
-    }
-
-    public static String getSalutation(String name, String greeting) {
-
-        return greeting + name.toUpperCase(Locale.ROOT);
-    }
-
-// *** Static vs Instance ***
-
-    public static int doTheMathStatic() {
-        return 1 + 2;
-    }
-
-    public int doTheMathInstance() {
-        return 1 + 2;
-    }
+//    public static void printSalutation(String name) {
+//        System.out.println(tryGetSalutation(name));
+//    }
+//
+//    public static String tryGetSalutation(String name) {
+//
+//        if ((name == null) || (name.equals(""))) {
+//            return "No name provided";
+//        } else {
+//            return getSalutation(name, "Why, hello ");
+//        }
+//    }
+//
+//    public static String getSalutation(String name, String greeting) {
+//
+//        return greeting + name.toUpperCase(Locale.ROOT);
+//    }
+//
+//// *** Static vs Instance ***
+//
+//    public static int doTheMathStatic() {
+//        return 1 + 2;
+//    }
+//
+//    public int doTheMathInstance() {
+//        return 1 + 2;
+//    }
 
 // *** Returning vs Void ***
 
-    public static String getGreeting() {
-        return "Hai!";
-    }
-
-    public static void printGreeting() {
-        System.out.println(getGreeting());
-    }
+//    public static String getGreeting() {
+//        return "Hai!";
+//    }
+//
+//    public static void printGreeting() {
+//        System.out.println(getGreeting());
+//    }
 
 
 // *** Parameters ***
@@ -132,36 +141,68 @@ public class MethodsLecture {
 //    }
 
 
-    public static void printNames(String name) {
-        System.out.printf("Hello, %s, and\n", name);
-    }
-
-    public static void printNames(String name1, String name2) {
-        System.out.printf("Hello, %s and %s\n", name1, name2);
-    }
-
-    public static void printNames(String name1, String name2, String name3) {
-        System.out.printf("Hello, %s, %s, and %s\n", name1, name2, name3);
-    }
-
-    public static void printNames() {
-
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter names: ");
-        String userNames = sc.nextLine();
-        String name1 = "";
-        String name2 = "";
-        String name3 = "";
-        printNames(name1);
-        printNames(name1, name2);
-        printNames(name1, name2, name3);
-        printNames(userNames, name2, name3);
-    }
-
+//    public static void printNames(String name) {
+//        System.out.printf("Hello, %s, and\n", name);
+//    }
+//
+//    public static void printNames(String name1, String name2) {
+//        System.out.printf("Hello, %s and %s\n", name1, name2);
+//    }
+//
+//    public static void printNames(String name1, String name2, String name3) {
+//        System.out.printf("Hello, %s, %s, and %s\n", name1, name2, name3);
+//    }
+//
+//    public static void printNames() {
+//
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("Enter names: ");
+//        String userNames = sc.nextLine();
+//        String name1 = "";
+//        String name2 = "";
+//        String name3 = "";
+//        printNames(name1);
+//        printNames(name1, name2);
+//        printNames(name1, name2, name3);
+//        printNames(userNames, name2, name3);
+//    }
 
 
 
 // ============== Recursion ===============
+
+    private static String[] recurFizzBuzz(String[] result, int index,
+                                          int start, int end) {
+        if (index > result.length) {
+            return result;
+        }
+        if (index % 15 == 0) {
+            result[index - 1] = "FizzBuzz";
+        } else if (index % 3 == 0) {
+            result[index - 1] = "Fizz";
+        } else if (index % 5 == 0) {
+            result[index - 1] = "Buzz";
+        } else {
+            result[index - 1] = Integer.toString(index);
+        }
+        return recurFizzBuzz(result, index + 1, start, end);
+    }
+
+    public static String[] fizzBuzz(int start, int end) {
+        return recurFizzBuzz(new String[1 + end - start], start, start, end);
+    }
+
+
+    public static int sum(int k) {
+        if (k > 0) {
+            return k + sum(k - 1);
+        } else {
+            return 0;
+        }
+    }
+
+
+
 
 // ============== Responsible Method Use ===============
 

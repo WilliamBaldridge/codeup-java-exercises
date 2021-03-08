@@ -21,7 +21,7 @@ public class MethodsLecture {
         int end = 100;
         System.out.println(Arrays.toString(fizzBuzz(start, end)));
 
-        System.out.println(sum(10));
+        System.out.println(sum(5));
 
 
     }

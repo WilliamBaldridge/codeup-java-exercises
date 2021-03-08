@@ -50,9 +50,8 @@ public class MethodsExercises {
         Scanner sc = new Scanner(System.in);
 
         System.out.printf("Enter a number between 1 and 10: ");
-        long userInput = sc.nextInt();
+        return sc.nextInt();
 
-        return fact(userInput);
     }
 
 
@@ -75,7 +74,7 @@ public class MethodsExercises {
     }
 
     public static void printFactorial() {
-        System.out.println(getInteger());
+        System.out.println(fact(getInteger()));
     }
 
 

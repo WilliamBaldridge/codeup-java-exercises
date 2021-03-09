@@ -1,3 +1,5 @@
+package oopLecture;
+
 
 public class DishTest {
 
@@ -10,8 +12,10 @@ public class DishTest {
 
         dish1.printSummary();
 
-    }
 
+//        dish1.nameOfDish;
+
+    }
 
 
 

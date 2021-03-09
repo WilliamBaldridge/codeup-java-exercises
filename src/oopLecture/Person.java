@@ -22,13 +22,13 @@ public class Person {
         // SLIDE 4
 
         // instance variables
-        public String firstName;
-        public String lastName;
-
-        // instance method (leaving "static" off)
-        public String sayHello() {
-                return lastName + ", " + firstName + " says hi!";
-        }
+//        public String firstName;
+//        public String lastName;
+//
+//        // instance method (leaving "static" off)
+//        public String sayHello() {
+//                return lastName + ", " + firstName + " says hi!";
+//        }
 
 //        public void fallAsleep() {
 //                isAwake = false;
@@ -40,9 +40,9 @@ public class Person {
 
 
     // SLIDE 7
-//        public static long worldPopulation = 7_500_000_000L; // class property
-//        public String name;                                  // instance property
-//
+        public static long worldPopulation = 7_500_000_000L; // class property
+        public String name;                                  // instance property
+
 //        public static void main(String[] args) {
 //
 //                System.out.println(Person.worldPopulation);

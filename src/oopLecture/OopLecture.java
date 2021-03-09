@@ -8,20 +8,20 @@ public class OopLecture {
         // ======================== slide 3 (classes and objects)
 
 
-        Person p1 = new Person();
-        p1.firstName = "Justin";
-        p1.lastName = "Reich";
+//        Person p1 = new Person();
+//        p1.firstName = "Justin";
+//        p1.lastName = "Reich";
 //        p1.age = 30;
 //        System.out.printf("%s %s %d", p1.firstName, p1.lastName, p1.age);
-        System.out.println(p1.sayHello());
+//        System.out.println(p1.sayHello());
 
-        Person p2 = new Person();
-        p2.firstName = "Justin";
-        p2.lastName = "Reich";
+//        Person p2 = new Person();
+//        p2.firstName = "Justin";
+//        p2.lastName = "Reich";
 
-        Person p3 = new Person();
-        p3.firstName = "Billy";
-        p3.lastName = "Joe";
+//        Person p3 = new Person();
+//        p3.firstName = "Billy";
+//        p3.lastName = "Joe";
 
 //        System.out.println("Hello " +
 //                p1.firstName +
@@ -96,15 +96,30 @@ public class OopLecture {
 
         // -- DogHelper Example --
 
+        // log out NUMBER_OF_DOG_BREEDS???
+
+//        System.out.println(DogHelper.NUMBER_OF_DOG_BREEDS);
+//
+//        int sparkyAgeInHumanYears = 10;
+//        int ageInDogYears = (int) DogHelper.humanToDogYears(sparkyAgeInHumanYears);
+//        System.out.println(ageInDogYears);
 
         // ======================== slide 7 (class vs. object fields)
 
-//            Person theBestDrummerAlive = new Person();
-//            theBestDrummerAlive.name = "Neil Peart";
-//            Person.worldPopulation += 1; // accessing a static property
+//        Person theBestDrummerAlive = new Person();
+//        theBestDrummerAlive.name = "Neil Peart";
 //
-//            System.out.println(Person.worldPopulation);
+//        Person theBestSinger = new Person();
+//        theBestSinger.name = "Weird Al";
 //
+//        Person.worldPopulation += 1; // accessing a static property
+
+//        theBestDrummerAlive.worldPopulation = 5;
+//        System.out.println(theBestSinger.worldPopulation); // accessing through the object (i.e. bestdrummer or bestsinger) is not common, rather use access through the class as below (person.worldPopulation)
+//        System.out.println(theBestDrummerAlive.worldPopulation);
+
+//        System.out.println(Person.worldPopulation);
+
 //            // this also works, but is usually not a good idea
 //            System.out.println(theBestDrummerAlive.worldPopulation); // 7500000001
 //            System.out.println(theBestDrummerAlive.name);

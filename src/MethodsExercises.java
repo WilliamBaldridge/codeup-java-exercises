@@ -45,15 +45,13 @@ public class MethodsExercises {
     // 2
 
 
-
-    public static long getInteger() {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.printf("Enter a number between 1 and 10: ");
-        return sc.nextInt();
-
-    }
-
+//    public static long getInteger() {
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.printf("Enter a number between 1 and 10: ");
+//        return sc.nextInt();
+//
+//    }
 
 
 //        if (userInput < min || userInput > max) {
@@ -66,6 +64,13 @@ public class MethodsExercises {
 //    }
 
 
+    public static long getInteger(Scanner sc) {
+
+        System.out.printf("Enter a number between 1 and 10: ");
+        return sc.nextInt();
+
+    }
+
     public static long fact(long userInput) {
         if (userInput <= 1)
             return 1;
@@ -74,8 +79,9 @@ public class MethodsExercises {
     }
 
     public static void printFactorial() {
-        System.out.println(fact(getInteger()));
+        System.out.println(fact(getInteger(new Scanner(System.in))));
     }
+
 
 
 

@@ -1,6 +1,5 @@
 package oopLecture;
 
-import oopLecture.Person;
 
 public class OopLecture {
 
@@ -12,19 +11,32 @@ public class OopLecture {
         Person p1 = new Person();
         p1.firstName = "Justin";
         p1.lastName = "Reich";
-        System.out.println(p1.firstName);
-        System.out.println(p1.lastName);
+//        p1.age = 30;
+//        System.out.printf("%s %s %d", p1.firstName, p1.lastName, p1.age);
+        System.out.println(p1.sayHello());
 
         Person p2 = new Person();
         p2.firstName = "Justin";
         p2.lastName = "Reich";
 
-//            System.out.println(p1);
+        Person p3 = new Person();
+        p3.firstName = "Billy";
+        p3.lastName = "Joe";
+
+//        System.out.println("Hello " +
+//                p1.firstName +
+//                ", " +
+//                p2.firstName +
+//                ", and " +
+//                p3.firstName);
+
+
+//            System.out.println(p1);  @123abc is unique identifier for new/each object
 //            System.out.println(p2);
 
 //            Person justinImposter = p2;
 //
-//            System.out.println(justinImposter);
+//            System.out.println(justinImposter); //still points to same object (@abc123)
 //            System.out.println(p2);
 
 //            System.out.println(p1 == p2);

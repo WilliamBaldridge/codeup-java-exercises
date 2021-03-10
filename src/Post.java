@@ -1,3 +1,5 @@
+import java.util.Date;
+
 public class Post {
 
     // static variables
@@ -26,14 +28,12 @@ public class Post {
     }
 
     public String returnAuthorDateMessage() {
-        return String.format("This post was created by %s on %s", author, createdAt);
+        return String.format("This post was created by %s on %S", author, createdAt);
     }
 
 //    public void addComment(Comment comment) {
 //
 //    }
-
-
 
 
     // static methods
@@ -77,4 +77,5 @@ public class Post {
         // accessing static property
         System.out.println(Post.nameOfBlog);
     }
+}
 

@@ -147,11 +147,12 @@ public class OopLecture {
 
         // ======================== slide 10 (visibility)
 
-//            Student student = new Student("John Doe", 82.4);
-//            System.out.println(student.name) // "John Doe"
-//            // DON'T DO THIS - can't access private properties outside the class
+            Student student = new Student("John Doe", 82.4);
+            System.out.println(student.name); // "John Doe"
+            // DON'T DO THIS - can't access PRIVATE properties outside the class
 //            System.out.println(student.grade);
-//            System.out.println(student.shareGrade()); // Do this instead
+//            Student.grade = 100;
+            System.out.println(student.shareGrade()); // Do this instead
 
 
     }

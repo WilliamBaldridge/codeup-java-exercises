@@ -1,17 +1,37 @@
+import org.w3c.dom.ls.LSOutput;
+
+import javax.crypto.spec.PSource;
 import java.util.Arrays;
 
 public class ArraysExercises {
 
-//    Person[] peopleArr;
-//
-//    peopleArr = new Person[3];
-//
-//    peopleArr[0] = new Person("Bob");
-//    peopleArr[1] = new Person("Joe");
-//    peopleArr[2] = new Person("Sue");
-//
-////        Arrays.fill(peopleArr, "Bob");
-//
+//    public Person[] peopleArr;
+
+    public Person [] peopleArr = new Person[3];
+
+
+    public static Person[] addPeople(Person[] peopleArr) {
+
+        Person[] extendedPeopleArr = Arrays.copyOf(peopleArr, peopleArr.length + 1);
+
+        for (Person person : peopleArr) {
+            person.setName("Bob");
+            extendedPeopleArr[extendedPeopleArr.length - 1] = person;
+
+        }
+
+        return extendedPeopleArr;
+//        peopleArr[0] = new Person("Bob");
+//        peopleArr[1] = new Person("Joe");
+//        peopleArr[2] = new Person("Sue");
+//        return peopleArr[0].getName(peopleArr);
+//        return peopleArr;
+
+    }
+
+
+//        Arrays.fill(peopleArr, "Bob");
+
 //        System.out.println(Arrays.toString(peopleArr));
 //
 //
@@ -24,16 +44,16 @@ public class ArraysExercises {
 //    }
 
 
-    public static Person[] addPerson(Person[] peopleArr, Person person) {
-
-//        int peopleArrLength = peopleArr.length +1;
-        Person[] extendedPeopleArr = Arrays.copyOf(peopleArr, peopleArr.length +1);
-
-        extendedPeopleArr[extendedPeopleArr.length - 1] = person;
-
-        return extendedPeopleArr;
-
-    }
+//    public static Person[] addPerson(Person[] peopleArr, Person person) {
+//
+////        int peopleArrLength = peopleArr.length +1;
+//        Person[] extendedPeopleArr = Arrays.copyOf(peopleArr, peopleArr.length +1);
+//
+//        extendedPeopleArr[extendedPeopleArr.length - 1] = person;
+//
+//        return extendedPeopleArr;
+//
+//    }
 
 
 
@@ -42,34 +62,37 @@ public class ArraysExercises {
 //        int[] numbers = {1, 2, 3, 4, 5};
 //        System.out.println(Arrays.toString(numbers));
 
-        Person[] peopleArr;
-
-        peopleArr = new Person[3];
-
-        peopleArr[0] = new Person("Bob");
-        peopleArr[1] = new Person("Joe");
-        peopleArr[2] = new Person("Sue");
+//        Person[] peopleArr;
+//
+//        peopleArr = new Person[3];
+//
+//        peopleArr[0] = new Person("Bob");
+//        peopleArr[1] = new Person("Joe");
+//        peopleArr[2] = new Person("Sue");
 
 //        Arrays.fill(peopleArr, "Bob");
 
-        System.out.println(Arrays.toString(peopleArr));
+//        System.out.println(Arrays.toString(peopleArr));
 
 
 //        for (int i = 0; i < peopleArr.length; i++) {
 //        System.out.println(peopleArr.getName()); // needed [i]
 //    }
 
-        for (int i = 0; i < peopleArr.length; i++) {
-            System.out.println(peopleArr[i].getName());
-        }
+//        for (int i = 0; i < peopleArr.length; i++) {
+//            System.out.println(peopleArr[i].getName());
+//        }
+//
+//        peopleArr = addPerson(peopleArr, new Person("Bob"));
+//
+//        for (Person person: peopleArr) {
+//
+//            System.out.println("Using enhanced for loop: " + person.getName());
+//
+//        }
 
-        peopleArr = addPerson(peopleArr, new Person("Bob"));
-
-        for (Person person: peopleArr) {
-
-            System.out.println("Using enhanced for loop: " + person.getName());
-
-        }
+        System.out.println(peopleArr);
+        System.out.println(Arrays.toString(addPeople(peopleArr)));
 
 
     }

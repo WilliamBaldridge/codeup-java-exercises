@@ -3,10 +3,10 @@ package inheritancepolylecture;
 public class Ingredient {
 
     public String brandName;
-    public boolean isSugarFree;
+    protected int calories;
 
-    public Ingredient() {
-
+    public Ingredient(String brandName) {
+        this.brandName = brandName;
     }
 
     public void throwAway() {
@@ -19,6 +19,14 @@ public class Ingredient {
 
     public void setBrandName(String brandName) {
         this.brandName = brandName;
+    }
+
+    public int getCalories() {
+        return calories;
+    }
+
+    public void setCalories(int calories) {
+        this.calories = calories;
     }
 
 

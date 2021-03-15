@@ -2,6 +2,10 @@ package inheritancepolylecture;
 
 public class KitchenTool {
 
+    public boolean isDirty;
+    public boolean isSharp;
+    public int numberOf;
+
     KitchenTool() {
 
     }
@@ -9,13 +13,12 @@ public class KitchenTool {
     public boolean getSharp() {
         return isSharp;
     }
-     public boolean isSharp;
+
 
     public int getNumberOf() {
         return numberOf;
     }
 
-    public int numberOf;
 
     public void wash() {
         System.out.println("Washing kitchen tool...");

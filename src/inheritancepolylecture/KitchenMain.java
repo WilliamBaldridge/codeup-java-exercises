@@ -1,6 +1,6 @@
 package inheritancepolylecture;
 
-public class Main {
+public class KitchenMain {
 
         public static void main(String[] args) {
 

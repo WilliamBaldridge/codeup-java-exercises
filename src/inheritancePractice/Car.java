@@ -1,4 +1,4 @@
-package inheritanceLecture.inheritancePractice;
+package inheritancePractice;
 
 public class Car extends Vehicle {
 

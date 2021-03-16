@@ -1,4 +1,4 @@
-package inheritanceLecture.inheritancePractice;
+package inheritancePractice;
 
 import java.util.Scanner;
 
@@ -35,6 +35,8 @@ public class App {
         vehicle.typeOfVehicle();
         vehicle.popsWheelie();
         vehicle.describe();
+
+
 
 
     }

@@ -48,14 +48,14 @@ public class CollectionsLecture {
 //        System.out.println(names);
 
 
-//        numbers.remove(3);
-        numbers.remove(Integer.valueOf(3));
+        numbers.remove(3);
+//        numbers.remove(Integer.valueOf(3));
         System.out.println(numbers);
 
 
         // reordering list
 
-        Collections.sort(numbers);
+//        Collections.sort(numbers);
 //        Collections.reverse(numbers);
 //        System.out.println(numbers);
 
@@ -63,7 +63,7 @@ public class CollectionsLecture {
         // info about list and getting elements
 
         System.out.println(numbers.size());
-        System.out.println(numbers.indexOf(3));
+        System.out.println(numbers.indexOf(4));
         System.out.println(numbers);
         System.out.println(numbers.indexOf(105));
 //

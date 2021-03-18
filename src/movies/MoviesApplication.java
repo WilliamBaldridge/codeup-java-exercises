@@ -73,13 +73,15 @@ public class MoviesApplication {
 
     private static String returnMenuDisplay() {
 
-        String choices = "What would you like do do?\n" +
-                "0 - exit\n" +
-        "1 - view all movies\n" +
-        "2 - view movies in the animated category\n" +
-        "3 - view movies in the drama category\n" +
-        "4 - view movies in the horror category\n" +
-        "5 - view movies in the scifi category\n";
+        String choices = """
+                What would you like do do?
+                0 - exit 
+                1 - view all movies
+                2 - view movies in the animated category+
+                3 - view movies in the drama category
+                4 - view movies in the horror category
+                5 - view movies in the scifi category
+                """;
 
         return choices;
     }

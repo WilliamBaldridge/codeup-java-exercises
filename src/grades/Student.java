@@ -36,23 +36,12 @@ public class Student {
 
     }
 
+    public List<Integer> getGrades(){
+        return this.grades;
+    }
+
 
     public static void main(String[] args) {
-
-//            ArrayList grades;
-
-//        grades = new ArrayList(Arrays.a sList(
-//
-//                89,
-//                100,
-//                98,
-//                94,
-//                82,
-//                88,
-//                88,
-//                92,
-//                95
-//        ));
 
         Student myself = new Student("William");
         myself.addGrade(70);

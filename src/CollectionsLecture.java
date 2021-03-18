@@ -13,11 +13,11 @@ public class CollectionsLecture {
         numbers.add(2);
         numbers.add(3);
 //
-        List<String> names = new ArrayList<>(Arrays.asList(
-                "Fred",
-                "Sally",
-                "Cindy"
-        ));
+//        List<String> names = new ArrayList<>(Arrays.asList(
+//                "Fred",
+//                "Sally",
+//                "Cindy"
+//        ));
 
         // peeking into list
 
@@ -37,7 +37,7 @@ public class CollectionsLecture {
         numbers.add(0, 21);
         numbers.set(0,7);
 //        numbers.add(10, 22); // indexes outside the array length will throw "out of bounds exception"
-//        System.out.println(numbers);
+        System.out.println(numbers);
 
 
         // removing elements
@@ -63,7 +63,7 @@ public class CollectionsLecture {
         // info about list and getting elements
 
         System.out.println(numbers.size());
-        System.out.println(numbers.indexOf(4));
+        System.out.println(numbers.indexOf(20));
         System.out.println(numbers);
         System.out.println(numbers.indexOf(105));
 //

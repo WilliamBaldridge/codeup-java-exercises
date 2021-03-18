@@ -5,55 +5,73 @@ import java.util.*;
 public class Student {
 
     private String name;
-    private List<Double> grades;
+    private List<Integer> grades;
 
 
-    public Student(String name, ArrayList<Double> grades) {
+    public Student(String name) {
+
         this.name = name;
-        this.grades = grades;
+        this.grades = new ArrayList<>();
+
     }
 
     public String getName() {
+
         return name;
+
     }
 
     public void addGrade(int grade) {
-        grades.add((double) grade);
+
+        grades.add(grade);
+
     }
 
-    public Double getGradeAverage() {
-        double numOfGrades = grades.size();
-        double totalGrades = grades.stream().mapToDouble(Double::doubleValue).sum();
+    public Integer getGradeAverage() {
+
+        int numOfGrades = grades.size();
+        int totalGrades = grades.stream().mapToInt(Integer::intValue).sum();
 
         return totalGrades / numOfGrades;
+
     }
 
 
     public static void main(String[] args) {
 
+//            ArrayList grades;
 
+//        grades = new ArrayList(Arrays.a sList(
+//
+//                89,
+//                100,
+//                98,
+//                94,
+//                82,
+//                88,
+//                88,
+//                92,
+//                95
+//        ));
 
-        ArrayList myGrades;
-
-        myGrades = new ArrayList(Arrays.asList(
-                89.0,
-                100.0,
-                98.0,
-                94.0,
-                82.0,
-                88.0,
-                88.0,
-                92.0,
-                95.0
-        ));
-
-        Student myself = new Student("William", myGrades);
-
-        System.out.println(myself.getName());
-        System.out.println(myGrades.size());
+        Student myself = new Student("William");
+        myself.addGrade(70);
+        myself.addGrade(90);
+        myself.addGrade(93);
+//        Arrays.asList();
         System.out.println(myself.getGradeAverage());
 
-//        myGrades.addGrade(100);
+        Student yasin = new Student("Yasin");
+        yasin.addGrade(90);
+        yasin.addGrade(98);
+        yasin.addGrade(98);
+
+        System.out.println(yasin.getName());
+//        System.out.println(yasin.getGradeAverage());
+
+        yasin.addGrade(100);
+        System.out.println(yasin.grades);
+        System.out.println(yasin.getGradeAverage());
 
 
 

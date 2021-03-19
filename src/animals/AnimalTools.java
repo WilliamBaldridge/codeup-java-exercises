@@ -39,7 +39,7 @@ public class AnimalTools {
 
 //        canine.printDetails();
 //        feline.printDetails();
-        assert animal != null;
+//        assert animal != null;
         animal.printDetails();
 
         System.out.println("Would you like more details on an animal? (yes/y)");

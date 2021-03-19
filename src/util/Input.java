@@ -19,11 +19,6 @@ public class Input {
     public boolean yesNo() {
 
         String input = scanner.next();
-//        if (input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes")) {
-//            return true;
-//        } else {
-//            return false;
-//        }
 
         return (input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes"));
 
@@ -33,9 +28,12 @@ public class Input {
     public int getInt(int min, int max) {
 
         int userInt = getInt();
-        if (userInt >= min && userInt <= max) {
+
+        if (userInt >= min || userInt <= max) {
+
             return userInt;
         } else {
+
             System.out.printf("Number is outside the range, enter a number between %d and %d%n", min, max);
             return getInt(min, max);
         }
@@ -44,15 +42,15 @@ public class Input {
 
     public int getInt() {
 
-        if (scanner.hasNextInt()) {
-            return scanner.nextInt();
-        } else {
-            System.out.println("Wrong input, enter an integer");
-            scanner.nextLine();
+        try {
+            return Integer.parseInt(getString());
+        }catch (NumberFormatException e) {
+            System.out.printf("Input could not be parsed into an integer. %s%n", e.getMessage());
+            System.out.println("Try again...");
             return getInt();
         }
-
     }
+
 
     public double getDouble(double min, double max) {
 
@@ -66,16 +64,20 @@ public class Input {
 
     }
 
-    public double getDouble() {
+    public double getDouble() throws NumberFormatException {
 
-        if (scanner.hasNextDouble()) {
-            return scanner.nextDouble();
-        } else {
-            System.out.println("Wrong input, enter a number");
-            scanner.nextLine();
+        try {
+            if (scanner.hasNextDouble()) {
+                return scanner.nextDouble();
+            } else {
+                System.out.println("Wrong input, enter a number");
+                scanner.nextLine();
+                return getDouble();
+            }
+        } catch (NumberFormatException e) {
+            System.out.println(e.getMessage());
             return getDouble();
         }
-
     }
 
 
@@ -99,14 +101,13 @@ public class Input {
 //        int userInt = input.getInt();
 //        System.out.println("Your integer is: " + userInt);
 
-//        System.out.println("Enter a number between 1 and 10");
-//        int userInt = input.getInt(1, 10);
-//        System.out.println("Your integer is: " + userInt);
-
         System.out.println("Enter a number between 1 and 10");
-        double userDouble = input.getDouble(1.1, 10.5);
-        System.out.println("Your number is: " + userDouble);
+        int userInt = input.getInt(1, 10);
+        System.out.println("Your integer is: " + userInt);
 
+//        System.out.println("Enter a number between 1 and 10");
+//        double userDouble = input.getDouble(1.1, 10.5);
+//        System.out.println("Your number is: " + userDouble);
 
 
     }

@@ -53,7 +53,6 @@ public class MoviesApplication {
                 System.out.println("\n");
                 viewMoviesByCat("scifi");
                 System.out.println("\n");
-                break;
 
         }
 

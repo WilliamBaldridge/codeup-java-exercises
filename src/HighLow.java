@@ -7,8 +7,7 @@ public class HighLow {
 
     }
 
-
-
+    
     public static void initializeGame() {
         Scanner sc = new Scanner(System.in);
         int randomNum = (int) (Math.random()*100) + 1;
@@ -49,7 +48,7 @@ public class HighLow {
         } else if (guess < targetNum) {
             return "Sorry, too low, try again";
         }
-        return "blah";
+        return "anything";
     }
 
 

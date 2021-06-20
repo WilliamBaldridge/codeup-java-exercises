@@ -13,9 +13,9 @@ public class AllConstruct {
         List<List<String>> result = new ArrayList<>();
         for (String prefix : wordBank) {
             if (target.startsWith(prefix)) {
-                List<List<String>> sufixWays =  allConstruct(target.replaceFirst(prefix, ""), wordBank);
-                sufixWays.forEach( a -> a.add(0, prefix));
-                result.addAll(sufixWays);
+                List<List<String>> suffixWays =  allConstruct(target.replaceFirst(prefix, ""), wordBank);
+                suffixWays.forEach( a -> a.add(0, prefix));
+                result.addAll(suffixWays);
             }
         }
         return result;
@@ -31,12 +31,12 @@ public class AllConstruct {
         List<List<String>> result = new ArrayList<>();
         for (String prefix : wordBank) {
             if (target.startsWith(prefix)) {
-                List<List<String>> sufixWays = allConstructMemo(target.replaceFirst(prefix, ""), wordBank, memo)
+                List<List<String>> suffixWays = allConstructMemo(target.replaceFirst(prefix, ""), wordBank, memo)
                         .stream()
                         .map(ArrayList::new)
                         .collect(Collectors.toList());
-                sufixWays.forEach( a -> a.add(0, prefix));
-                result.addAll(sufixWays);
+                suffixWays.forEach( a -> a.add(0, prefix));
+                result.addAll(suffixWays);
             }
         }
         memo.put(target, result);

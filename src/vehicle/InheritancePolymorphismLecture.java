@@ -1,4 +1,4 @@
-package inheritanceLecture.vehicle;
+package vehicle;
 
 public class InheritancePolymorphismLecture {
 
